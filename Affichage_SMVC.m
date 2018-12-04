@@ -4,7 +4,7 @@ function Affichage_SMVC(X,t,Resolution)
   subplot(3,3,[1,2,3]);
   plot(t,X);
   title('Signal');
-  xlabel('t');
+  xlabel('Time');
   ylabel('x(t)');
 
   % Affichage de la Moyenne
@@ -12,7 +12,7 @@ function Affichage_SMVC(X,t,Resolution)
   subplot(3,3,4);
   plot(AverageFunction(X,Resolution));
   title('Moyenne');
-  xlabel('t');
+  xlabel('Time');
   ylabel('E[x(t)]');
 
   % Affichage de la Variance
@@ -20,7 +20,7 @@ function Affichage_SMVC(X,t,Resolution)
   subplot(3,3,5);
   plot(VarianceFunction(X,Resolution));
   title('Variance');
-  xlabel('t');
+  xlabel('Time');
   ylabel('Var[x(t)]');
 
   % Affichage de l'Autocorrelation
