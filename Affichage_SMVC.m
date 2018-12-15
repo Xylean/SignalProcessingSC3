@@ -31,4 +31,6 @@ function Affichage_SMVC(X,t,Resolution)
   title('Autocorrelation');
   xlabel('\tau');
   ylabel('C_{x}(\tau)');
+  
+  %abs(fft(X))
 end
