@@ -1,2 +1,27 @@
+# MatLab
+
 *.mat
 *.asv
+
+# Latex
+
+*.pdf
+*.aux
+*.log
+*.gitignore
+*.bbl
+*.blg
+*.dvi
+*.toc
+*.idx
+*.ilg
+*.ind
+*.sty
+*.out
+*.lof
+*.lot
+*.glg
+*.glo
+*.gls
+*.glsdefs
+*.ist
