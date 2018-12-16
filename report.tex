@@ -7,35 +7,37 @@
 \usepackage{amsmath}
 \usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
 
-\title{Rapport Travaux Pratiques \\ SC3}
-\author{Théo Bertrant \& Xyléan Broeders \\ Fi 2021}
+\title{\Huge{Rapport Travaux Pratiques \\ SC3}}
+\author{\\ Théo Bertrant \& Xyléan Broeders \\ Fi 2021}
 \date{19 Décembre 2018}
 
 %Glossary
-\makeglossaries
 
 \begin{document}
 
 %Title of the document
 \maketitle
-Durant ce TP Nous allons nous interéssés à l'étude d'un signal (ici le n°X). Nous allons dans un premier temps étudier ces caractéristiques physiques. Ensuite nous alons déduire des analyses précendentes, si oui ou non ce signal est stationnaire du 2\textsuperscript{nd} ordre. Enfin, nous allons essayer (dans la mesure du possible) de reconstituier le signal d'origine.
+
+\chapter{Analyse du signal}
+Durant ce TP Nous allons nous interéssés à l'étude d'un signal (ici le nX). Nous allons dans un premier temps étudier ces caractéristiques physiques. Ensuite nous alons déduire des analyses précendentes, si oui ou non ce signal est stationnaire du 2\textsuperscript{nd} ordre. Enfin, nous allons essayer (dans la mesure du possible) de reconstituier le signal d'origine.
 \section{Etude générale du signal}
   Nous observons tout d'abord que les valeurs de ce signal sont comprises entre XX et XX, et qu'il dure XX xx secondes.
   Interresons maintenant à plusieurs de ce caractéristiques, sa moyenne, variance, et son autocorrélation.
   \begin{figure}[ht]
     \begin{center}
-      \includegraphics[scale=0.5]{images/smthg.png}
+     % \includegraphics[scale=0.5]{images/smthg.png}
     \end{center}
     \caption{Recapitulatif des valeurs obtenues}
     \label{Recapitulatif des valeurs obtenues}
   \end{figure}
 
 \section{Stationnarité du 2\textsuperscript{nd} orde}
-  Pour rappel, un signal est dit staionnnaire du second ordre si s'est propriétés statistiques ne varient pas en fonctions du temps. C'est à dire s'il verifie :
-  \begin{math}\mathbb{E}[X(t)^2]<\infty\end{math}
-  \begin{math}\mathbb{E}[X(t)]=Constante<\infty\end{math}
-  \begin{math}\mathbb{E}[X(t)X(t)^*(t-\tau)]=C_X(\tau)<\infty\end{math}
-  \\
+  Pour rappel, un signal est dit staionnnaire du second ordre si s'est propriétés statistiques ne varient pas en fonctions du temps. C'est à dire s'il verifie : 
+  \begin{center}
+  	\begin{math}\mathbb{E}[X(t)^2]<\infty\end{math} \\
+  	\begin{math}\mathbb{E}[X(t)]=Constante\end{math} \\
+  	\begin{math}\mathbb{E}[X(t)X(t)^*(t-\tau)]=C_X(\tau)\end{math}
+  \end{center}
   On constate ainsi que le signal n'est pas stationnaire du 2\textsuperscript{nd} ordre, en effet sont autocorrélation est dépendante du temps. Néanmoins, nous observons qu'elle est conctate sur certains intervalles de temps. Nous définissons ainsi X "blocs" :
   \begin{description}
     \item[Bloc 1 : ]de XX à XX
@@ -49,5 +51,5 @@ Durant ce TP Nous allons nous interéssés à l'étude d'un signal (ici le n°X)
   \subsection{Bloc 3}
   \subsection{Bloc 4}
 
-
+\chapter{Lancement des fonctions}
 \end{document}
