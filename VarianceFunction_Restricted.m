@@ -1,4 +1,4 @@
-% Variance du Signal sur des intervalles de Sup-Inf-1 unitées
+% Variance du Signal sur des intervalles de Sup-Inf-1 unitees
 function [x] = VarianceFunction_Restricted(Signal,Resolution,Inf,Sup)
   %Setting up boundaries
   LowerBound = round(Inf/Resolution);

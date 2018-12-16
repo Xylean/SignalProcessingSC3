@@ -1,4 +1,4 @@
-% Autocorrelation du Signal sur des intervalles de Sup-Inf-1 unitées
+% Autocorrelation du Signal sur des intervalles de Sup-Inf-1 unitees
 function AutoCorrFunction_Restricted(Signal,Resolution,Inf,Sup)
   %Define new martice
   AC=[];

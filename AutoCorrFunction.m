@@ -1,4 +1,4 @@
-% Autocorrelation du Signal sur des intervalles de Resolution-1 unitées
+% Autocorrelation du Signal sur des intervalles de Resolution-1 unitees
 function AC = AutoCorrFunction(Signal,Resolution)
   AC=[];
   for i=0:((size(Signal,2)/Resolution)-1)
