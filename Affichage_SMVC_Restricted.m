@@ -2,7 +2,7 @@
 function Affichage_SMVC_Restricted(X,t,Resolution,Inf,Sup)
   % Affichage du Signal
   subplot(3,3,[1,2,3]);
-  plot(t,X);
+  plot(t(Inf:Sup),X(Inf:Sup));
   title('Signal');
   xlabel('Time');
   ylabel('x(t)');

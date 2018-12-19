@@ -8,7 +8,7 @@
 \usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
 
 \title{\Huge{Rapport Travaux Pratiques \\ SC3}}
-\author{\\ Théo Bertrant \& Xyléan Broeders \\ Fi 2021}
+\author{\\ Théo Bertrand \& Xyléan Broeders \\ Fi 2021}
 \date{19 Décembre 2018}
 
 %Glossary
@@ -19,10 +19,9 @@
 \maketitle
 
 \chapter{Analyse du signal}
-Durant ce TP Nous allons nous interéssés à l'étude d'un signal (ici le nX). Nous allons dans un premier temps étudier ces caractéristiques physiques. Ensuite nous alons déduire des analyses précendentes, si oui ou non ce signal est stationnaire du 2\textsuperscript{nd} ordre. Enfin, nous allons essayer (dans la mesure du possible) de reconstituier le signal d'origine.
+	Durant ce TP, nous allons nous intéresser à l'étude d'un signal (ici le nX). Dans un premier temps, nous allons étudier les caractéristiques physiques du signal.  Pour ensuite, pouvoir déterminer si ce signal est stationnaire du second ordre. Finalement, nous allons essayer (dans la mesure du possible) de reconstituer le signal d'origine.
 \section{Etude générale du signal}
-  Nous observons tout d'abord que les valeurs de ce signal sont comprises entre XX et XX, et qu'il dure XX xx secondes.
-  Interresons maintenant à plusieurs de ce caractéristiques, sa moyenne, variance, et son autocorrélation.
+	Nous observons tout d'abord que les valeurs de ce signal sont comprises entre XX et XX, et qu’il a une durée de XX secondes. Intéressons-nous maintenant à plusieurs de ses caractéristiques et notamment sa moyenne, sa variance, et son autocorrélation.
   \begin{figure}[ht]
     \begin{center}
      % \includegraphics[scale=0.5]{images/smthg.png}
@@ -32,13 +31,14 @@ Durant ce TP Nous allons nous interéssés à l'étude d'un signal (ici le nX). 
   \end{figure}
 
 \section{Stationnarité du 2\textsuperscript{nd} orde}
-  Pour rappel, un signal est dit staionnnaire du second ordre si s'est propriétés statistiques ne varient pas en fonctions du temps. C'est à dire s'il verifie : 
+	Pour rappel, un signal est dit stationnaire du second ordre si ses propriétés statistiques ne varient pas en fonctions du temps. C'est-à-dire s'il vérifie :
   \begin{center}
   	\begin{math}\mathbb{E}[X(t)^2]<\infty\end{math} \\
   	\begin{math}\mathbb{E}[X(t)]=Constante\end{math} \\
   	\begin{math}\mathbb{E}[X(t)X(t)^*(t-\tau)]=C_X(\tau)\end{math}
   \end{center}
-  On constate ainsi que le signal n'est pas stationnaire du 2\textsuperscript{nd} ordre, en effet sont autocorrélation est dépendante du temps. Néanmoins, nous observons qu'elle est conctate sur certains intervalles de temps. Nous définissons ainsi X "blocs" :
+	On constate que le signal n'est pas stationnaire du second ordre, en effet son autocorrélation dépendant du temps. Néanmoins, nous observons qu'elle est constante sur certains intervalles de temps. On peut ainsi dénombrer X "blocs" :
+
   \begin{description}
     \item[Bloc 1 : ]de XX à XX
     \item[Bloc 2 : ]de XX à XX
@@ -46,7 +46,7 @@ Durant ce TP Nous allons nous interéssés à l'étude d'un signal (ici le nX). 
     \item[Bloc 4 : ]de XX à XX
   \end{description}
   \subsection{Bloc 1}
-  Les variations de l'autocorrélation pouvant être considérés comme négligeable, on considére ce bloc comme stationnaire du 2\textsuperscript{nd} ordre.
+	Les variations de l'autocorrélation peuvent être considérées comme négligeables, on peut donc avec ce postulat, considérer ce bloc comme stationnaire du second ordre.
   \subsection{Bloc 2}
   \subsection{Bloc 3}
   \subsection{Bloc 4}
