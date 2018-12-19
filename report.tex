@@ -62,6 +62,14 @@
     \label{Analyses du Bloc 1}
   \end{figure}
 
+	\begin{figure}[ht]
+		\begin{center}
+		\includegraphics[scale=0.25]{images/AutoCorrBloc1.png}
+		\end{center}
+		\caption{Analyses de l'autocorrelation Bloc 1}
+		\label{Analyses de l'autocorrelation Bloc 1}
+	\end{figure}
+
 	L'éspérence et l'autocorrelation étant dépendantes du temps, ce signal n'est pas stationnaire du second ordre.
   \subsection{Bloc 2}
 
@@ -87,14 +95,22 @@
 
 	\begin{figure}[ht]
 		\begin{center}
-		\includegraphics[scale=0.25]{images/AutoCorrBloc2.png}
+		\includegraphics[scale=0.25]{images/DSPBloc2.png}
 		\end{center}
 		\caption{Analyses de la DSP du Bloc 2}
 		\label{Analyses de la DSP du Bloc 2}
 	\end{figure}
 
 	Après analyse de la Densité Spéctrale de Puissance, on la suppose constante. \\
-	Sachant que, par definition un bruit blanc est stationnaire du second ordre, à une éspérance nulle et à une DSP constante. On en déduit donc que le Bloc 2 est un bruit blanc. Cela ce confirme lors de l'étude de la Fast Fourier Transform du Bloc 2.
+	Sachant que, par definition un bruit blanc est stationnaire du second ordre, à une éspérance nulle et à une DSP constante. On en déduit donc que le Bloc 2 est un bruit blanc. Cela ce confirme lors de l'étude de la \textit{Fast Fourier Transform} du Bloc 2.
+
+	\begin{figure}[ht]
+		\begin{center}
+		\includegraphics[scale=0.25]{images/TFBloc2.png}
+		\end{center}
+		\caption{Fast Fourier Transform du Bloc 2}
+		\label{Fast Fourier Transform du Bloc 2}
+	\end{figure}
 
   \subsection{Bloc 3}
 
@@ -119,7 +135,7 @@
 
 	\begin{figure}[ht]
     \begin{center}
-    \includegraphics[scale=0.25]{images/SignalBloc3.png}
+    \includegraphics[scale=0.25]{images/SignalBloc4.png}
     \end{center}
     \caption{Analyses du Bloc 4}
     \label{Analyses du Bloc 4}
@@ -136,12 +152,45 @@
 	Lors de l'étude l'autocorrelation de ce bloc, nous avons constater la précense de deux sous-blocs, noté Bloc 4a (190 000 - 300 000) et Bloc 4b (300 000 - 500 000). En effet, l'un à une autocorrelation variant dans le temps (Bloc 4a), contrairement à l'autre (Bloc 4b).
 
 	\subsubsection{Bloc 4a}
-	L'éspérence et l'autocorrelation étant dépendantes du temps, ce signal n'est pas stationnaire du second ordre.
+	L'éspérence étant dépendantes du temps, ce signal n'est pas stationnaire du second ordre.
 
 	\subsubsection{Bloc 4b}
+
+	\begin{figure}[ht]
+		\begin{center}
+		\includegraphics[scale=0.25]{images/AutoCorrBloc4-2.png}
+		\end{center}
+		\caption{Analyses de l'autocorrelation Bloc 4b}
+		\label{Analyses de l'autocorrelation Bloc 4b}
+	\end{figure}
+
 	Les variations de l'éspérance peuvent être considérées comme négligeables. De même son autocorrélation peut être comme constante.
 	Après étude de la variance et sachant que \begin{math}Var(X) = \mathbb{E}[X(t)^2] - \mathbb{E}[X(t)]^2\end{math}, et que \begin{math}\mathbb{E}[X(t)]^2<\infty\end{math}, car l'éspérance est constante, alors on a bien : \begin{math}\mathbb{E}[X(t)^2]<\infty\end{math}. Ce bloc est donc bien stationnaire du second ordre.
 	Enfin, on constate un pic de Dirac en \(t = 0\), ce qui est la preuve de la précense de bruit dans le signal.
+
+	\begin{figure}[ht]
+		\begin{center}
+		\includegraphics[scale=0.25]{images/DSPBloc4-2.png}
+		\end{center}
+		\caption{Analyses de la DSP du Bloc 4b}
+		\label{Analyses de la DSP du Bloc 4b}
+	\end{figure}
+
+	\begin{figure}[ht]
+		\begin{center}
+		\includegraphics[scale=0.5]{images/TFBloc4-2.png}
+		\end{center}
+		\caption{Fast Fourier Transform du Bloc 4b}
+		\label{Fast Fourier Transform du Bloc 4b}
+	\end{figure}
+
+	Après analyse de la Densité Spéctrale de Puissance, on la suppose constante. \\
+	Après étude de la \textit{Fast Fourier Transform} du Bloc 4b, constate deux pics de Dirac en \begin{math}-f_0 \end{math} et \begin{math}f_0\end{math}. Sachant que :
+	\begin{center}
+		\begin{math}TF[cos(X)] = \frac{1}{2}[\delta (f - f_0) + \delta (f + f_0)]\end{math}
+	\end{center}
+	On en déduit donc la précense d'une fonction cosinus dans ce bloc.
+
 
 \chapter{Lancement des fonctions}
 \end{document}
