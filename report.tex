@@ -17,9 +17,9 @@
 \maketitle
 
 \chapter{Analyse du signal}
-	Durant ce TP, nous allons nous intéresser à l'étude d'un signal (ici le n\textsuperscript{o}8). Dans un premier temps, nous allons étudier les caractéristiques physiques du signal.  Pour ensuite, pouvoir déterminer si ce signal est stationnaire du second ordre. Finalement, nous allons essayer (dans la mesure du possible) de reconstituer le signal d'origine.
+	Durant ce TP, nous allons nous intéresser à l'étude d'un signal (ici le n\textsuperscript{o}8). Dans un premier temps, nous allons étudier les caractéristiques physiques du signal.  Pour ensuite, pouvoir déterminer si ce signal est stationnaire du second ordre.
 \section{Etude générale du signal}
-	Nous observons tout d'abord que les valeurs de ce signal à une amplitude de 6 volts, et une durée de 500 $\mu s$ (1 $\mu s$ par fenetre d'échantillonnage). Intéressons-nous maintenant à plusieurs de ses caractéristiques et notamment sa moyenne, sa variance, et son autocorrélation.
+	Nous observons tout d'abord que les valeurs de ce signal ont une amplitude de 6 volts, et une durée de 500 $\mu s$ (1 $\mu s$ par fenêtre d'échantillonnage). Intéressons-nous maintenant à plusieurs de ses caractéristiques et notamment sa moyenne, sa variance, et son autocorrélation.
   \begin{figure}[ht]
     \begin{center}
     \includegraphics[scale=0.25]{images/SignalFull.png}
@@ -29,7 +29,7 @@
   \end{figure}
 
 \section{Stationnarité du 2\textsuperscript{nd} orde}
-	Pour rappel, un signal est dit stationnaire du second ordre si ses propriétés statistiques ne varient pas en fonctions du temps. C'est-à-dire s'il vérifie :
+	Pour rappel, un signal est dit stationnaire du second ordre si ses propriétés statistiques ne varient pas en fonction du temps. C'est-à-dire s'il vérifie :
   \begin{center}
   	\begin{math}\mathbb{E}[X(t)^2]<\infty\end{math} \\
   	\begin{math}\mathbb{E}[X(t)]=Constante\end{math} \\
@@ -45,7 +45,7 @@
 		\label{Recapitulatif des valeurs obtenues}
 	\end{figure}
 
-	Après étude de l'autocorrélation, on constate que le signal n'est pas stationnaire du second ordre, en effet son autocorrélation dépendant du temps. Néanmoins, nous observons qu'elle est constante sur certains intervalles de temps. On peut ainsi dénombrer 4 "blocs" :
+	Après l'étude de l'autocorrélation, on constate que le signal n'est pas stationnaire du second ordre. En effet son autocorrélation dépendant du temps. Néanmoins, nous observons qu'elle est constante sur certains intervalles de temps. On peut ainsi dénombrer 4 "blocs" :
 
   \begin{description}
     \item[Bloc 1 : ]de 0 à 100 000
@@ -62,15 +62,7 @@
     \label{Analyses du Bloc 1}
   \end{figure}
 
-	\begin{figure}[ht]
-		\begin{center}
-		\includegraphics[scale=0.25]{images/AutoCorrBloc1.png}
-		\end{center}
-		\caption{Analyses de l'autocorrelation Bloc 1}
-		\label{Analyses de l'autocorrelation Bloc 1}
-	\end{figure}
-
-	L'éspérence et l'autocorrelation étant dépendantes du temps, ce signal n'est pas stationnaire du second ordre.
+	L'espérance et l'autocorrelation sont dépendantes du temps, ce signal n'est donc pas stationnaire du second ordre.
   \subsection{Bloc 2}
 
 	\begin{figure}[ht]
@@ -89,9 +81,9 @@
 		\label{Analyses de l'autocorrelation Bloc 2}
 	\end{figure}
 
-	Les variations de l'éspérance peuvent être considérées comme négligeables (amplitude de 0,4 volt). De même son autocorrélation peut être comme constante.
-	Après étude de la variance et sachant que \begin{math}Var(X) = \mathbb{E}[X(t)^2] - \mathbb{E}[X(t)]^2\end{math}, et que \begin{math}\mathbb{E}[X(t)]^2<\infty\end{math}, car l'éspérance est constante, alors on a bien : \begin{math}\mathbb{E}[X(t)^2]<\infty\end{math}. Ce bloc est donc bien stationnaire du second ordre.
-	Enfin, on constate un pic de Dirac en \(t = 0\), ce qui est la preuve de la précense de bruit dans le signal.
+	Les variations de l'espérance peuvent être considérées comme négligeables (amplitude de 0,4 volt). De même son autocorrélation peut être considérée comme constante.
+	Sachant que \begin{math}Var(X) = \mathbb{E}[X(t)^2] - \mathbb{E}[X(t)]^2\end{math}, et que \begin{math}\mathbb{E}[X(t)]^2<\infty\end{math}, car l'espérance est constante. On en déduit que : \begin{math}\mathbb{E}[X(t)^2]<\infty\end{math}. Ce bloc est donc bien stationnaire du second ordre.
+	Enfin, on constate un pic de Dirac sur la représentation de l'autocorrelation en \(t = 0\), ceci peut être dû à la présence de bruits dans le signal.
 
 	\begin{figure}[ht]
 		\begin{center}
@@ -101,16 +93,8 @@
 		\label{Analyses de la DSP du Bloc 2}
 	\end{figure}
 
-	Après analyse de la Densité Spéctrale de Puissance, on la suppose constante. \\
-	Sachant que, par definition un bruit blanc est stationnaire du second ordre, à une éspérance nulle et à une DSP constante. On en déduit donc que le Bloc 2 est un bruit blanc. Cela ce confirme lors de l'étude de la \textit{Fast Fourier Transform} du Bloc 2.
-
-	\begin{figure}[ht]
-		\begin{center}
-		\includegraphics[scale=0.25]{images/TFBloc2.png}
-		\end{center}
-		\caption{Fast Fourier Transform du Bloc 2}
-		\label{Fast Fourier Transform du Bloc 2}
-	\end{figure}
+	Après analyse de la Densité Spectrale de Puissance, on la suppose constante (les variations sont négligeables). \\
+	Sachant que, par définition un bruit blanc est stationnaire du second ordre, à une espérance nulle et à une DSP constante. On en déduit donc que le bloc 2 est un bruit blanc. Cela se confirme lors de l'étude de la Fast Fourier Transform du bloc 2.
 
   \subsection{Bloc 3}
 
@@ -130,7 +114,7 @@
 		\label{Analyses de l'autocorrelation Bloc 3}
 	\end{figure}
 
-	L'éspérence et l'autocorrelation étant dépendantes du temps, ce signal n'est pas stationnaire du second ordre.
+	L'espérance et l'autocorrelation étant dépendantes du temps, ce signal n'est pas stationnaire du second ordre.
   \subsection{Bloc 4}
 
 	\begin{figure}[ht]
@@ -149,24 +133,16 @@
 		\label{Analyses de l'autocorrelation Bloc 4}
 	\end{figure}
 
-	Lors de l'étude l'autocorrelation de ce bloc, nous avons constater la précense de deux sous-blocs, noté Bloc 4a (190 000 - 300 000) et Bloc 4b (300 000 - 500 000). En effet, l'un à une autocorrelation variant dans le temps (Bloc 4a), contrairement à l'autre (Bloc 4b).
+	Lors de l'étude de l'autocorrelation de ce bloc, nous avons constaté la présence de deux sous-blocs, noté bloc 4a (190 000 - 300 000) et bloc 4b (300 000 - 500 000). En effet, l'un a une autocorrelation variant dans le temps (Bloc 4a), contrairement à l'autre (Bloc 4b).
 
 	\subsubsection{Bloc 4a}
-	L'éspérence étant dépendantes du temps, ce signal n'est pas stationnaire du second ordre.
+	L'espérance et l'autocorrelation sont dépendantes du temps, ce signal n'est pas stationnaire du second ordre.
 
 	\subsubsection{Bloc 4b}
+	Les variations de l'espérance peuvent être considérées comme négligeables. De même son autocorrélation peut être considérée comme constante.
 
-	\begin{figure}[ht]
-		\begin{center}
-		\includegraphics[scale=0.25]{images/AutoCorrBloc4-2.png}
-		\end{center}
-		\caption{Analyses de l'autocorrelation Bloc 4b}
-		\label{Analyses de l'autocorrelation Bloc 4b}
-	\end{figure}
-
-	Les variations de l'éspérance peuvent être considérées comme négligeables. De même son autocorrélation peut être comme constante.
-	Après étude de la variance et sachant que \begin{math}Var(X) = \mathbb{E}[X(t)^2] - \mathbb{E}[X(t)]^2\end{math}, et que \begin{math}\mathbb{E}[X(t)]^2<\infty\end{math}, car l'éspérance est constante, alors on a bien : \begin{math}\mathbb{E}[X(t)^2]<\infty\end{math}. Ce bloc est donc bien stationnaire du second ordre.
-	Enfin, on constate un pic de Dirac en \(t = 0\), ce qui est la preuve de la précense de bruit dans le signal.
+Sachant que \begin{math}Var(X) = \mathbb{E}[X(t)^2] - \mathbb{E}[X(t)]^2\end{math}, et que \begin{math}\mathbb{E}[X(t)]^2<\infty\end{math}, car l'espérance est constante. On en déduit que : \begin{math}\mathbb{E}[X(t)^2]<\infty\end{math}. Ce bloc est donc bien stationnaire du second ordre.
+Enfin, on constate un pic de Dirac sur la représentation de l'autocorrelation en \(t = 0\), ceci peut être dû à la présence de bruits dans le signal.
 
 	\begin{figure}[ht]
 		\begin{center}
