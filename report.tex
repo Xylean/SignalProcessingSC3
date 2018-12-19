@@ -62,6 +62,14 @@
     \label{Analyses du Bloc 1}
   \end{figure}
 
+	\begin{figure}[ht]
+		\begin{center}
+		\includegraphics[scale=0.25]{images/AutoCorrBloc1.png}
+		\end{center}
+		\caption{Analyses de l'autocorrelation Bloc 1}
+		\label{Analyses de l'autocorrelation Bloc 1}
+	\end{figure}
+
 	L'espérance et l'autocorrelation sont dépendantes du temps, ce signal n'est donc pas stationnaire du second ordre.
   \subsection{Bloc 2}
 
@@ -91,6 +99,14 @@
 		\end{center}
 		\caption{Analyses de la DSP du Bloc 2}
 		\label{Analyses de la DSP du Bloc 2}
+	\end{figure}
+
+	\begin{figure}[ht]
+		\begin{center}
+		\includegraphics[scale=0.25]{images/TFBloc2.png}
+		\end{center}
+		\caption{Fast Fourier Transform du Bloc 2}
+		\label{Fast Fourier Transform du Bloc 2}
 	\end{figure}
 
 	Après analyse de la Densité Spectrale de Puissance, on la suppose constante (les variations sont négligeables). \\
@@ -140,6 +156,14 @@
 
 	\subsubsection{Bloc 4b}
 	Les variations de l'espérance peuvent être considérées comme négligeables. De même son autocorrélation peut être considérée comme constante.
+
+	\begin{figure}[ht]
+		\begin{center}
+		\includegraphics[scale=0.25]{images/AutoCorrBloc4-2.png}
+		\end{center}
+		\caption{Analyses de l'autocorrelation Bloc 4b}
+		\label{Analyses de l'autocorrelation Bloc 4b}
+	\end{figure}
 
 Sachant que \begin{math}Var(X) = \mathbb{E}[X(t)^2] - \mathbb{E}[X(t)]^2\end{math}, et que \begin{math}\mathbb{E}[X(t)]^2<\infty\end{math}, car l'espérance est constante. On en déduit que : \begin{math}\mathbb{E}[X(t)^2]<\infty\end{math}. Ce bloc est donc bien stationnaire du second ordre.
 Enfin, on constate un pic de Dirac sur la représentation de l'autocorrelation en \(t = 0\), ceci peut être dû à la présence de bruits dans le signal.
